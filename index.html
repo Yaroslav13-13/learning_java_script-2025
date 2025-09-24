@@ -3,7 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Learning JS</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <button data-module="1">Module-1</button>
+      <button data-module="2">Module-2</button>
+      <button data-module="3">Module-3</button>
+      <button data-module="4">Module-4</button>
+      <button data-module="5">Module-5</button>
+      <button data-module="6">Module-6</button>
+      <button data-module="7">Module-7</button>
+      <button data-module="8">Module-8</button>
+      <button data-module="9">Module-9</button>
+      <button data-module="10">Module-10</button>
+      <button data-module="11">Module-11</button>
+      <button data-module="12">Module-12</button>
+    </div>
+
+    <script>
+      document.querySelectorAll("button").forEach((btn) => {
+        btn.addEventListener("click", async () => {
+          const moduleNum = btn.dataset.module;
+          await import(`./JavaScript 3.0/module-${moduleNum}.js`);
+        });
+      });
+    </script>
+  </body>
 </html>

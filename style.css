@@ -1,0 +1,62 @@
+/* Скидання стилів */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://kartinki.pics/uploads/posts/2021-04/thumbs/1617584993_2-p-fon-dlya-saita-temnii-2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 кнопки в ряд */
+  gap: 24px;
+  max-width: 900px;
+  width: 100%;
+  padding: 20px;
+}
+
+button {
+  padding: 14px 24px;
+  background: linear-gradient(
+    135deg,
+    #fbff00,
+    #ffbb00
+  ); /* темно-сірий градієнт */
+  color: #000000;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(
+    135deg,
+    #4d4d4d,
+    #f70000
+  ); /* міняємо напрямок градієнта при ховері */
+  transform: translateY(-3px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
