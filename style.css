@@ -1,4 +1,4 @@
-/* Скидання стилів */
+/* =================== Скидання стилів =================== */
 * {
   margin: 0;
   padding: 0;
@@ -6,64 +6,92 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://kartinki.pics/uploads/posts/2021-04/thumbs/1617584993_2-p-fon-dlya-saita-temnii-2.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: radial-gradient(circle at top, #0a0a0a, #000000 80%);
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding: 40px 20px;
+  overflow-y: auto;
 }
 
+/* =================== Анімація неонового світіння =================== */
+@keyframes neonPulse {
+  0% {
+    box-shadow: 0 0 15px #00f0ff, 0 0 30px #008cff;
+  }
+  50% {
+    box-shadow: 0 0 30px #00f0ff, 0 0 60px #7a00ff;
+  }
+  100% {
+    box-shadow: 0 0 15px #00f0ff, 0 0 30px #008cff;
+  }
+}
+
+/* =================== Контейнер =================== */
 .container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 кнопки в ряд */
-  gap: 24px;
-  max-width: 900px;
+  grid-template-columns: repeat(3, 1fr); /* чотири в ряд */
+  gap: 40px;
+  justify-items: center;
+  align-items: center;
+  max-width: 1600px;
   width: 100%;
   padding: 20px;
 }
 
+/* =================== Кнопки з іконками =================== */
 .btn-home {
-  width: 100%; /* кнопка на всю ширину картки */
-  height: 80px; /* робимо вищою */
-  padding: 20px;
-  background: linear-gradient(135deg, #fbff00, #ffbb00);
-  color: #000000;
+  width: 480px;
+  height: 360px;
+  background: linear-gradient(135deg, #00f0ff, #7a00ff);
   border: none;
-  border-radius: 16px;
-  font-weight: 700;
-  font-size: 20px; /* більший текст */
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+  animation: neonPulse 3s infinite alternate;
   transition: all 0.3s ease;
+  box-shadow: 0 0 15px #00f0ff, 0 0 30px #008cff;
+}
+
+.btn-home img {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.7));
 }
 
 .btn-home:hover {
-  background: linear-gradient(
-    135deg,
-    #4d4d4d,
-    #f70000
-  ); /* міняємо напрямок градієнта при ховері */
-  transform: translateY(-3px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
-  color: #fff;
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 0 40px #00e0ff, 0 0 80px #7a00ff;
 }
 
-.btn-home:active {
-  transform: translateY(0);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
+/* =================== Модульні карти =================== */
 .module-card {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
 }
 
-.module-title {
-  margin-top: 12px;
+/* =================== Текст під кнопкою =================== */
+.module-card .module-title {
+  width: 180px;
+  text-align: center;
   font-size: 16px;
+  font-weight: 600;
+  color: #e0f7ff;
+  line-height: 1.3;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+/* =================== Посилання =================== */
+a {
+  text-decoration: none;
 }

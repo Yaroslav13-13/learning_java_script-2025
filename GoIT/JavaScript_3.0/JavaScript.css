@@ -1,62 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://kartinki.pics/uploads/posts/2021-04/thumbs/1617584993_2-p-fon-dlya-saita-temnii-2.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: radial-gradient(circle at top, #0a0a0a, #000000 80%);
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  overflow: hidden;
+}
+
+@keyframes neonPulse {
+  0% {
+    box-shadow: 0 0 15px #00f0ff, 0 0 30px #008cff;
+  }
+  50% {
+    box-shadow: 0 0 30px #00f0ff, 0 0 60px #7a00ff;
+  }
+  100% {
+    box-shadow: 0 0 15px #00f0ff, 0 0 30px #008cff;
+  }
 }
 
 .container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 кнопки в ряд */
-  gap: 24px;
-  max-width: 900px;
-  width: 100%;
+  grid-template-columns: repeat(4, 1fr); /* 4 карти в рядку */
+  gap: 40px;
+  justify-items: center; /* центруємо карти по горизонталі */
+  align-items: start; /* вирівнюємо по верхньому краю */
+  max-width: 1600px;
   padding: 20px;
 }
 
 .btn-home {
-  width: 100%; /* кнопка на всю ширину картки */
-  height: 80px; /* робимо вищою */
-  padding: 20px;
-  background: linear-gradient(135deg, #fbff00, #ffbb00);
-  color: #000000;
+  width: 380px;
+  height: 180px;
+  background: linear-gradient(135deg, #00f0ff, #7a00ff);
   border: none;
-  border-radius: 16px;
+  border-radius: 24px;
+  color: #fff;
+  font-size: 28px;
   font-weight: 700;
-  font-size: 20px; /* більший текст */
   cursor: pointer;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
-  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  transition: all 0.4s ease;
+  animation: neonPulse 3s infinite alternate;
+}
+
+.btn-home img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.7));
 }
 
 .btn-home:hover {
-  background: linear-gradient(
-    135deg,
-    #4d4d4d,
-    #f70000
-  ); /* міняємо напрямок градієнта при ховері */
-  transform: translateY(-3px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
-  color: #fff;
+  background: linear-gradient(135deg, #7a00ff, #00c3ff);
+  transform: scale(1.07) rotate(-1deg);
+  box-shadow: 0 0 40px #00e0ff, 0 0 80px #7a00ff;
 }
 
 .btn-home:active {
-  transform: translateY(0);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transform: scale(0.95);
+  background: linear-gradient(135deg, #004cff, #6600aa);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+
+.back-btn-js {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #00f0ff, #7a00ff);
+  font-weight: 700;
+  font-size: 20px;
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px #00f0ff;
+}
+
+.back-btn-js:hover {
+  background: linear-gradient(135deg, #7a00ff, #00c3ff);
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px #00f0ff, 0 0 60px #7a00ff;
+  color: #e0f7ff;
+}
+
+.back-btn-js:active {
+  transform: scale(0.95);
+  background: linear-gradient(135deg, #004cff, #6600aa);
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-home {
+  width: 380px;
+  height: 180px;
+  background: linear-gradient(135deg, #00f0ff, #7a00ff);
+  border: none;
+  border-radius: 24px;
+  color: black;
+  font-size: 36px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  transition: all 0.4s ease;
+  animation: neonPulse 3s infinite alternate;
+  text-shadow: 0 0 6px rgba(0, 255, 255, 0.6);
+}
+
+.btn-home:hover {
+  color: #8cf9ff;
+  text-shadow: 0 0 10px #00e0ff, 0 0 20px #7a00ff;
+}
+
+.btn-home:active {
+  color: #ccccff;
+  text-shadow: none;
 }
 
 .module-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.module-card .btn-home {
+  width: 380px;
+  height: 180px;
+  font-size: 36px;
+}
+
+.module-card .module-title {
+  width: 380px;
   text-align: center;
+  white-space: normal;
+  word-wrap: break-word;
+  font-size: 26px;
+  font-weight: 600;
+  color: #e0f7ff;
+  margin: 0;
+  line-height: 1.3;
 }
 
 .module-title {
-  margin-top: 12px;
-  font-size: 16px;
+  text-align: center;
+}
+
+/*! ==================================  NEXT ============================ */
+
+.container-next {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 кнопки в першому ряді */
+  gap: 40px;
+  justify-items: center; /* центруємо карти горизонтально */
+  align-items: start;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+/* Для другого ряду (2 кнопки) робимо "порожній" третій стовпець */
+.module-card-next:nth-child(4),
+.module-card-next:nth-child(5) {
+  grid-column: span 1;
+}
+
+/* Додатково центруємо другий рядок */
+.module-card-next:nth-child(4) {
+  grid-column-start: 2; /* почати з другого стовпця */
 }
