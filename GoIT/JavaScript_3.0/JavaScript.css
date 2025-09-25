@@ -30,10 +30,10 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 карти в рядку */
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
-  justify-items: center; /* центруємо карти по горизонталі */
-  align-items: start; /* вирівнюємо по верхньому краю */
+  justify-items: center;
+  align-items: start;
   max-width: 1600px;
   padding: 20px;
 }
@@ -110,7 +110,7 @@ a {
 }
 
 .btn-home {
-  width: 380px;
+  width: 180px;
   height: 180px;
   background: linear-gradient(135deg, #00f0ff, #7a00ff);
   border: none;
@@ -146,8 +146,8 @@ a {
 }
 
 .module-card .btn-home {
-  width: 380px;
-  height: 180px;
+  width: 280px;
+  height: 140px;
   font-size: 36px;
 }
 
@@ -170,33 +170,25 @@ a {
 /*! ==================================  NEXT ============================ */
 
 .box-next {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 3 кнопки в першому ряді */
-  gap: 40px;
-  justify-items: center; /* центруємо карти горизонтально */
-  align-items: start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
   max-width: 1200px;
   padding: 20px;
 }
 
-/* Для другого ряду (2 кнопки) робимо "порожній" третій стовпець */
-.module-card-next:nth-child(4),
-.module-card-next:nth-child(5) {
-  grid-column: span 1;
-}
-
-/* Додатково центруємо другий рядок */
-.module-card-next:nth-child(4) {
-  grid-column-start: 2; /* почати з другого стовпця */
+.module-card-next {
+  flex: 0 0 380px;
 }
 
 /*! ==================================  REACT ============================ */
 
 .box-react {
   display: flex;
-  flex-wrap: wrap; /* дозволяємо переносити кнопки на новий рядок */
-  justify-content: center; /* центруємо всі рядки по горизонталі */
-  gap: 40px; /* відстань між картками */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
   max-width: 1600px;
   padding: 20px;
 }
