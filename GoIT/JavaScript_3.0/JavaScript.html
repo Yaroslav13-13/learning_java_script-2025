@@ -3,30 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./JavaScript.css" />
     <title>Learning JS</title>
   </head>
   <body>
+    <a href="/index.html">
+      <button class="back-btn">⬅ Back</button>
+    </a>
     <div class="container">
       <div class="module-card">
-        <a href="./GoIT/JavaScript_3.0/JavaScript.html">
-          <button class="btn-home" data-module="1">JavaScript</button>
+        <a href="./JavaScript_3.0/Module-1/module-1.html">
+          <button class="btn-home" data-module="1">Module-1</button>
         </a>
+        <h2 class="module-title">Змінні та типи. Основи функцій</h2>
       </div>
 
       <div class="module-card">
-        <a href="./GoIT/React_3.0/react.html">
-          <button class="btn-home" data-module="2">REACT</button>
+        <a href="./JavaScript_3.0/Module-2/module-2.html">
+          <button class="btn-home" data-module="2">Module-2</button>
         </a>
+        <h2 class="module-title">Розгалуження і цикли</h2>
       </div>
 
       <div class="module-card">
-        <a href="./GoIT/Next.js_2.0/next.html">
-          <button class="btn-home" data-module="3">NEXT</button>
+        <a href="./JavaScript_3.0/Module-3/module-3.html">
+          <button class="btn-home" data-module="3">Module-3</button>
         </a>
+        <h2 class="module-title">Масиви і функції</h2>
       </div>
 
-      <!-- <div class="module-card">
+      <div class="module-card">
         <a href="./JavaScript_3.0/Module-4/module-4.html">
           <button class="btn-home" data-module="4">Module-4</button>
         </a>
@@ -87,16 +93,16 @@
           <button class="btn-home" data-module="12">Module-12</button>
         </a>
         <h2 class="module-title">Синтаксис async/await. Пагінація</h2>
-      </div> -->
+      </div>
     </div>
 
-    <!-- <script>
+    <script>
       document.querySelectorAll("button").forEach((btn) => {
         btn.addEventListener("click", async () => {
           const moduleNum = btn.dataset.module;
           await import(`./JavaScript 3.0/module-${moduleNum}.js`);
         });
       });
-    </script> -->
+    </script>
   </body>
 </html>
