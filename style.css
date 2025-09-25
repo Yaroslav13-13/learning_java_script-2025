@@ -29,19 +29,17 @@ body {
 }
 
 .btn-home {
-  padding: 14px 24px;
-  background: linear-gradient(
-    135deg,
-    #fbff00,
-    #ffbb00
-  ); /* темно-сірий градієнт */
+  width: 100%; /* кнопка на всю ширину картки */
+  height: 80px; /* робимо вищою */
+  padding: 20px;
+  background: linear-gradient(135deg, #fbff00, #ffbb00);
   color: #000000;
   border: none;
-  border-radius: 12px;
-  font-weight: 600;
-  font-size: 16px;
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: 20px; /* більший текст */
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
   transition: all 0.3s ease;
 }
 
@@ -59,4 +57,13 @@ body {
 .btn-home:active {
   transform: translateY(0);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.module-card {
+  text-align: center;
+}
+
+.module-title {
+  margin-top: 12px;
+  font-size: 16px;
 }
