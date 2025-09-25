@@ -39,7 +39,7 @@ body {
 }
 
 .btn-home {
-  width: 380px;
+  width: 280px;
   height: 180px;
   background: linear-gradient(135deg, #00f0ff, #7a00ff);
   border: none;
@@ -169,9 +169,9 @@ a {
 
 /*! ==================================  NEXT ============================ */
 
-.container-next {
+.box-next {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 кнопки в першому ряді */
+  grid-template-columns: repeat(2, 1fr); /* 3 кнопки в першому ряді */
   gap: 40px;
   justify-items: center; /* центруємо карти горизонтально */
   align-items: start;
@@ -188,4 +188,15 @@ a {
 /* Додатково центруємо другий рядок */
 .module-card-next:nth-child(4) {
   grid-column-start: 2; /* почати з другого стовпця */
+}
+
+/*! ==================================  REACT ============================ */
+
+.box-react {
+  display: flex;
+  flex-wrap: wrap; /* дозволяємо переносити кнопки на новий рядок */
+  justify-content: center; /* центруємо всі рядки по горизонталі */
+  gap: 40px; /* відстань між картками */
+  max-width: 1600px;
+  padding: 20px;
 }
