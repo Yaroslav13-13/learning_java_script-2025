@@ -157,6 +157,3 @@ li3.classList.add("list");
 li3.remove();
 
 //todo ========================================= Властивість innerHTML ===========================================
-const product = document.querySelectorAll("#products li");
-product[0].dataset.price = "111";
-console.log(product[0].dataset.price);
