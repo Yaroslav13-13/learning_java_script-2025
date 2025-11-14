@@ -128,4 +128,22 @@ console.log(isSpam("bUy SaLe"));
 
 // ***********************************************
 
-function extractExtension(fileName) {}
+function extractExtension(fileName) {
+  if (fileName.includes(".")) {
+    return fileName.slice(fileName.lastIndexOf("."));
+  }
+}
+
+console.log(extractExtension("photo.jpeg"));
+console.log(extractExtension("app.min.js"));
+console.log(extractExtension("archive.tar.gz"));
+console.log();
+console.log();
+
+let link = "https://my-site.com/about";
+
+if (!link.endsWith("/") && link.includes("my-site")) {
+  link += "/";
+}
+
+console.log(link);
