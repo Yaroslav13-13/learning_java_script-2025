@@ -147,3 +147,120 @@ if (!link.endsWith("/") && link.includes("my-site")) {
 }
 
 console.log(link);
+
+// 1
+function startsWithJava(text) {
+  if (text.startsWith("Java")) {
+    return true;
+  }
+  return false;
+}
+// 2
+function endsWithCss(file) {
+  file.endsWith(".css") ? "YES" : "NO";
+}
+// 3
+function normalizeEmail(email) {
+  return email.toLowerCase().trim();
+}
+// 4
+function containsWord(text, word) {
+  return text.toLowerCase().includes(word.toLowerCase());
+}
+// 5
+function cut(text, n) {
+  if (text.length > n) {
+    return text.slice(0, n) + "...";
+  }
+  return text;
+}
+// 6
+function getExtension(fileName) {
+  if (fileName.includes(".")) {
+    return fileName.slice(fileName.lastIndexOf("."));
+  }
+  return null;
+}
+// 7
+function capitalize(word) {
+  return word[0].toUpperCase() + word.slice(1).toLowerCase();
+}
+
+console.log(capitalize("javaScript"));
+// 8
+// function maskCard(number) {
+//   const strNumber = number.toString();
+//   const lastFourDigits = strNumber.slice(-4);
+//   const maskedSection = "*".repeat(strNumber.length - 4);
+//   return maskedSection + lastFourDigits;
+// }
+
+function maskCard(number) {
+  const str = number.toString();
+  console.log(str);
+  return str.slice(-4).padStart(str.length, "*");
+}
+
+console.log(maskCard("1234567812345678"));
+
+// 9
+function isQuestion(sentence) {
+  return sentence.trim().endsWith("?");
+}
+// 10
+function clean(text) {
+  return text.trim().toLowerCase().replaceAll("spam", "***");
+}
+
+console.log(clean(" SPAM SPAM  SPAM message   "));
+console.log(clean("   Hello world   "));
+
+// 11
+function getDomain(url) {
+  const domainStartIndex = url.indexOf("://") + 3;
+  const domainEndIndex = url.indexOf("/", domainStartIndex);
+  if (domainEndIndex === -1) {
+    return url.slice(domainStartIndex);
+  }
+}
+console.log(getDomain("https://google.com"));
+console.log(getDomain("http://example.org/about"));
+console.log(getDomain("https://my-site.com/page/1"));
+
+const message = "Hello // world";
+
+// 12
+
+function isStrongPassword(pass) {
+  if (pass.length < 8) return false;
+  if (!pass.includes("@", "#")) return false;
+  if (pass.includes(" ")) return false;
+}
+//  Я не знаю як це зробити
+console.log(isStrongPassword("qwerty"));
+console.log(isStrongPassword("Pass@123"));
+
+// 13
+function normalizeHost(url) {
+  let normalizedUrl = url.toLowerCase();
+  if (url.startsWith("www.")) {
+    return (normalizedUrl = normalizedUrl.slice(4));
+  }
+  return normalizedUrl;
+}
+
+console.log(normalizeHost("www.google.com"));
+console.log(normalizeHost("google.com"));
+console.log(normalizeHost("www.my-site.org"));
+
+function hasDigit(str) {
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] >= "0" && str[i] <= "9") {
+      return true;
+    }
+  }
+  return false;
+}
+console.log(hasDigit("abc123"));
+console.log(hasDigit("hello"));
+console.log(hasDigit("4you"));
