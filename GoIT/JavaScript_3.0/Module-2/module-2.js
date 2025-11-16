@@ -264,3 +264,53 @@ function hasDigit(str) {
 console.log(hasDigit("abc123"));
 console.log(hasDigit("hello"));
 console.log(hasDigit("4you"));
+
+function sumTo(n) {
+  let sum = 0;
+  for (let i = 0; i <= n; i++) {
+    sum += i;
+  }
+  return sum;
+}
+console.log(sumTo(5));
+
+function countEven(n) {
+  let count = 0;
+  for (let i = 0; i <= n; i++) {
+    if (i % 2 === 0) {
+      count++;
+    }
+  }
+
+  return count;
+}
+console.log(countEven(6));
+
+function countA(word) {
+  let a = 0;
+  for (let i = 0; i < word.length; i++) {
+    if (word[i].toLowerCase() === "a") {
+      a++;
+    }
+  }
+  return a;
+}
+console.log(countA("JavaScript"));
+
+function reverse(word) {
+  let reversedWord = "";
+  for (let i = 0; i < word.length; i++) {
+    reversedWord = word[i] + reversedWord;
+  }
+  return reversedWord;
+}
+console.log(reverse("JavaScript"));
+
+function max(num) {
+  let maxNum = num[0];
+  for (let i = 0; i < num.length; i++) {
+    maxNum = Math.max(maxNum, num[i]);
+  }
+  return maxNum;
+}
+console.log(max([1, 5, 2, 9, 3]));
