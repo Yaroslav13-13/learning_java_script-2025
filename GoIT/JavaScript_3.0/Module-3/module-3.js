@@ -1,4 +1,4 @@
-//!   ДЗ Модуль 2
+//!   ДЗ Модуль 3
 //!   Task 1
 console.log("| TASC - 1 |");
 
@@ -81,6 +81,3 @@ function unique(arr) {
 console.log(unique([1, 2, 2, 3, 1, 4])); // [1, 2, 3, 4]
 
 console.log(unique(["a", "b", "a", "c", "b"])); // ["a","b","c"]
-
-// 🔥 ЗАДАЧА 3
-function cutMiddle(arr, start, end) {}
