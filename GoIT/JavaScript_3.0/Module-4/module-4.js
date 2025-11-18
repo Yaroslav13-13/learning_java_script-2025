@@ -302,3 +302,13 @@ console.log("b", b);
 const lastWeekTemps = [12, 14, 15, 11, 13];
 const currentTemps = [16, 18, 17, 19, 20];
 const nextWeekTemps = [21, 22, 23, 24, 25];
+
+const allTemps = [...lastWeekTemps, ...currentTemps, ...nextWeekTemps];
+console.log(allTemps);
+//! ---------------------------------------------------------------------
+
+const objA = { x: 1, y: 2 };
+const objB = { x: 3, q: 4 };
+
+const objC = { ...objA, x: 10, ...objB, y: 20 };
+console.log(objC);

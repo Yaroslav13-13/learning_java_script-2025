@@ -314,3 +314,47 @@ function max(num) {
   return maxNum;
 }
 console.log(max([1, 5, 2, 9, 3]));
+//!========================================================================
+// 1
+function startsWithHello(text) {
+  return text.startsWith("Hello");
+}
+console.log(startsWithHello("Hello world"));
+// 2
+function truncate(text, maxLength) {
+  if (text.length > maxLength) {
+    return text.slice(0, maxLength) + "...";
+  }
+  return text;
+}
+console.log(truncate("Hello world", 8));
+// 3
+function replaceBadWord(text) {
+  return text.toLowerCase().replaceAll("bad", "***");
+}
+console.log(replaceBadWord("bAd BaD baD"));
+// 4
+function isEmail(email) {
+  if (
+    email.includes(".") &&
+    email.includes("@") &&
+    !email.startsWith("@") &&
+    !email.endsWith(".")
+  ) {
+    return true;
+  }
+  return false;
+}
+console.log(isEmail("dgfdedb@gmail.com"));
+// 5
+function countVowels(text) {
+  const vowels = "aeiou";
+  let total = 0;
+  for (let i = 0; i < text.length; i++) {
+    if (vowels.includes(text[i].toLowerCase())) {
+      total++;
+    }
+  }
+  return total;
+}
+console.log(countVowels("efwsdvwaeiouvwvwveioueiou"));
