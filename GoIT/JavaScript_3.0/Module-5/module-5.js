@@ -7,6 +7,7 @@ function getUserNames(users) {
   //     userName.push(user.name);
   //   }
   //   return userName;
+
   for (let i = 0; i < users.length; i++) {
     userName.push(users[i].name);
   }
@@ -53,3 +54,32 @@ console.log(
     },
   ])
 ); // ["Moore Hensley", "Sharlene Bush", "Ross Vazquez", "Elma Head", "Carey Barr", "Blackburn Dotson", "Sheree Anthony"]
+
+console.log(
+  "============================================================================="
+);
+// 1
+console.log(" = ПРАКТИКА = ");
+function processNumber(num, callback) {
+  return callback(num);
+}
+
+console.log(processNumber(5, (x) => x * 2));
+console.log(processNumber(10, (x) => x + 3));
+// 2
+function calculate(a, b, operation) {
+  return operation(a, b);
+}
+
+console.log(calculate(5, 3, (a, b) => a + b));
+console.log(calculate(5, 3, (a, b) => a - b));
+console.log(calculate(5, 3, (a, b) => a * b));
+// 3
+function showResult(result) {
+  console.log(result);
+}
+function doWork(a, b, callback) {
+  const sum = a + b;
+  callback(sum);
+}
+doWork(4, 6, showResult);
