@@ -70,13 +70,8 @@ console.log(
 //!   Task 2
 console.log("| TASC - 2 |");
 
-const getUsersWithFriend = (users, friendName) => {
-  users.filter((user) => {
-    console.log(user.name.includes(friendName));
-    if (friendName.includes(user.name)) {
-    }
-  });
-};
+const getUsersWithFriend = (users, friendName) =>
+  users.filter((user) => user.friends.includes(friendName));
 
 const allUsers = [
   {
@@ -134,6 +129,8 @@ console.log(getUsersWithFriend(allUsers, "Goldie Gentry"));
 // ]
 
 console.log(getUsersWithFriend(allUsers, "Adrian Cross")); // []
+//!   Task 3
+console.log("| TASC - 3 |");
 
 console.log(
   "============================================================================="
