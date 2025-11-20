@@ -1,19 +1,31 @@
 //!   ДЗ Модуль 5
 //!   Task 1
 console.log("| TASC - 1 |");
-function getUserNames(users) {
-  const userName = [];
+const getUserNames = (users) => {
+  //   const userName = [];
+  //* Варіант- 1
+
   //   for (const user of users) {
   //     userName.push(user.name);
   //   }
   //   return userName;
 
-  for (let i = 0; i < users.length; i++) {
-    userName.push(users[i].name);
-  }
+  //* Варіант- 2
 
-  return userName;
-}
+  //   for (let i = 0; i < users.length; i++) {
+  //     userName.push(users[i].name);
+  //   }
+  //   return userName;
+
+  //* Варіант- 3
+  //   users.forEach((item) => {
+  //     userName.push(item.name);
+  //   });
+  //     return userName;
+
+  //* Варіант- 4
+  return users.map((user) => user.name);
+};
 
 console.log(
   getUserNames([
@@ -55,6 +67,74 @@ console.log(
   ])
 ); // ["Moore Hensley", "Sharlene Bush", "Ross Vazquez", "Elma Head", "Carey Barr", "Blackburn Dotson", "Sheree Anthony"]
 
+//!   Task 2
+console.log("| TASC - 2 |");
+
+const getUsersWithFriend = (users, friendName) => {
+  users.filter((user) => {
+    console.log(user.name.includes(friendName));
+    if (friendName.includes(user.name)) {
+    }
+  });
+};
+
+const allUsers = [
+  {
+    name: "Moore Hensley",
+    friends: ["Sharron Pace"],
+  },
+  {
+    name: "Sharlene Bush",
+    friends: ["Briana Decker", "Sharron Pace"],
+  },
+  {
+    name: "Ross Vazquez",
+    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+  },
+  {
+    name: "Elma Head",
+    friends: ["Goldie Gentry", "Aisha Tran"],
+  },
+  {
+    name: "Carey Barr",
+    friends: ["Jordan Sampson", "Eddie Strong"],
+  },
+  {
+    name: "Blackburn Dotson",
+    friends: ["Jacklyn Lucas", "Linda Chapman"],
+  },
+  {
+    name: "Sheree Anthony",
+    friends: ["Goldie Gentry", "Briana Decker"],
+  },
+];
+
+console.log(getUsersWithFriend(allUsers, "Briana Decker"));
+// [
+//   {
+//     name: "Sharlene Bush",
+//     friends: ["Briana Decker", "Sharron Pace"]
+//   },
+//   {
+//     name: "Sheree Anthony",
+//     friends: ["Goldie Gentry", "Briana Decker"]
+//   }
+// ]
+
+console.log(getUsersWithFriend(allUsers, "Goldie Gentry"));
+// [
+//   {
+//     name: "Elma Head",
+//     friends: ["Goldie Gentry", "Aisha Tran"]
+//   },
+//   {
+//     name: "Sheree Anthony",
+//     friends: ["Goldie Gentry", "Briana Decker"]
+//   }
+// ]
+
+console.log(getUsersWithFriend(allUsers, "Adrian Cross")); // []
+
 console.log(
   "============================================================================="
 );
@@ -83,3 +163,69 @@ function doWork(a, b, callback) {
   callback(sum);
 }
 doWork(4, 6, showResult);
+// 4
+
+function each(arr, callback) {
+  const newArr = [];
+  for (const num of arr) {
+    newArr.push(callback(num));
+  }
+  return newArr;
+}
+
+console.log(
+  each([64, 49, 36, 25, 16], function (value) {
+    return value * 2;
+  })
+);
+
+console.log(
+  each([64, 49, 36, 25, 16], function (value) {
+    return value - 10;
+  })
+);
+console.log(
+  each([64, 49, 36, 25, 16], function (value) {
+    return Math.sqrt(value);
+  })
+);
+
+const addArrow = (a, b) => {
+  return a + b;
+};
+console.log(addArrow(10, 10));
+//00000000000000000000000000000000000000000000000000000000000000
+
+// // 1
+// function startsWithHttps(string) {
+//   return string.startsWith("https");
+// }
+// console.log(startsWithHttps("https://google.com"));
+// // 2
+// function truncate(text, end) {
+//   return text.length > end ? text.slice(0, end) + "..." : text;
+//   //   if (text.length > end) {
+//   //     return text.slice(0, end) + "...";
+//   //   }
+//   //   return text;
+// }
+// console.log(truncate("Hello world", 5));
+// // 3
+// function replaceSpaces(text) {
+//   return text.replaceAll(" ", "-");
+// }
+// console.log(replaceSpaces("Hello world JS"));
+// // 4
+// function countVowels(text) {
+//   const vowels = "aeiou";
+//   let sum = 0;
+//   for (const char of text.toLowerCase()) {
+//     if (vowels.includes(char)) {
+//       sum++;
+//     }
+//   }
+//   return sum;
+// }
+// console.log(countVowels("javascript"));
+// // 5
+// function getDomain(url) {}
