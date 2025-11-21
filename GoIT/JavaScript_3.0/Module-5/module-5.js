@@ -132,6 +132,137 @@ console.log(getUsersWithFriend(allUsers, "Adrian Cross")); // []
 //!   Task 3
 console.log("| TASC - 3 |");
 
+const sortByDescendingFriendCount = (users) => {
+  return users.toSorted((a, b) => b.friends.length - a.friends.length);
+};
+
+console.log(
+  sortByDescendingFriendCount([
+    {
+      name: "Moore Hensley",
+      friends: ["Sharron Pace"],
+      gender: "male",
+    },
+    {
+      name: "Sharlene Bush",
+      friends: ["Briana Decker", "Sharron Pace"],
+      gender: "female",
+    },
+    {
+      name: "Ross Vazquez",
+      friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+      gender: "male",
+    },
+    {
+      name: "Elma Head",
+      friends: ["Goldie Gentry", "Aisha Tran"],
+      gender: "female",
+    },
+    {
+      name: "Carey Barr",
+      friends: ["Jordan Sampson", "Eddie Strong"],
+      gender: "male",
+    },
+    {
+      name: "Blackburn Dotson",
+      friends: ["Jacklyn Lucas", "Linda Chapman"],
+      gender: "male",
+    },
+    {
+      name: "Sheree Anthony",
+      friends: ["Goldie Gentry", "Briana Decker"],
+      gender: "female",
+    },
+  ])
+);
+// [
+//   {
+//     name: "Ross Vazquez",
+//     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//     gender: "male"
+//   },
+//   {
+//     name: "Sharlene Bush",
+//     friends: ["Briana Decker", "Sharron Pace"],
+//     gender: "female"
+//   },
+//   {
+//     name: "Elma Head",
+//     friends: ["Goldie Gentry", "Aisha Tran"],
+//     gender: "female"
+//   },
+//   {
+//     name: "Carey Barr",
+//     friends: ["Jordan Sampson", "Eddie Strong"],
+//     gender: "male"
+//   },
+//   {
+//     name: "Blackburn Dotson",
+//     friends: ["Jacklyn Lucas", "Linda Chapman"],
+//     gender: "male"
+//   },
+//   {
+//     name: "Sheree Anthony",
+//     friends: ["Goldie Gentry", "Briana Decker"],
+//     gender: "female"
+//   },
+//   {
+//     name: "Moore Hensley",
+//     friends: ["Sharron Pace"],
+//     gender: "male"
+//   }
+// ]
+
+//!   Task 4
+console.log("| TASC - 4 |");
+const getTotalBalanceByGender = (users, gender) => {
+  return users
+    .filter((user) => user.gender === gender)
+    .reduce((total, user) => total + user.balance, 0);
+};
+
+const clients = [
+  {
+    name: "Moore Hensley",
+    gender: "male",
+    balance: 2811,
+  },
+  {
+    name: "Sharlene Bush",
+    gender: "female",
+    balance: 3821,
+  },
+  {
+    name: "Ross Vazquez",
+    gender: "male",
+    balance: 3793,
+  },
+  {
+    name: "Elma Head",
+    gender: "female",
+    balance: 2278,
+  },
+  {
+    name: "Carey Barr",
+    gender: "male",
+    balance: 3951,
+  },
+  {
+    name: "Blackburn Dotson",
+    gender: "male",
+    balance: 1498,
+  },
+  {
+    name: "Sheree Anthony",
+    gender: "female",
+    balance: 2764,
+  },
+];
+
+console.log(getTotalBalanceByGender(clients, "male")); // 12053
+
+console.log(getTotalBalanceByGender(clients, "female")); // 8863
+
 console.log(
   "============================================================================="
 );
@@ -226,3 +357,89 @@ console.log(addArrow(10, 10));
 // console.log(countVowels("javascript"));
 // // 5
 // function getDomain(url) {}
+
+console.log(
+  "---------------------------------------------------------------------------"
+);
+console.log(" = ПРАКТИКА = ");
+const userFriends = [
+  {
+    name: "Moore Hensley",
+    friends: ["Sharron Pace"],
+    gender: "male",
+  },
+  {
+    name: "Sharlene Bush",
+    friends: ["Briana Decker", "Sharron Pace"],
+    gender: "female",
+  },
+  {
+    name: "Ross Vazquez",
+    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+    gender: "male",
+  },
+  {
+    name: "Elma Head",
+    friends: ["Goldie Gentry", "Aisha Tran"],
+    gender: "female",
+  },
+  {
+    name: "Carey Barr",
+    friends: ["Jordan Sampson", "Eddie Strong"],
+    gender: "male",
+  },
+  {
+    name: "Blackburn Dotson",
+    friends: ["Jacklyn Lucas", "Linda Chapman"],
+    gender: "male",
+  },
+  {
+    name: "Sheree Anthony",
+    friends: ["Goldie Gentry", "Briana Decker"],
+    gender: "female",
+  },
+];
+//!========================= forEach() ======================================
+console.log("Task - 1: Виведи в консоль імена всіх користувачів");
+const task1 = (users) => users.forEach((user) => console.log(user.name));
+task1(userFriends);
+
+console.log("Task - 2: Для кожного юзера виведи імя та кількість друзів");
+const task2 = (users) =>
+  users.forEach((user) => console.log(`${user.name}: ${user.friends.length}`));
+task2(userFriends);
+
+console.log("Task - 3: Виведи тільки тих користувачів, у кого друзі більше 1.");
+const task3 = (users) =>
+  users.forEach((user) => {
+    if (user.friends.length > 1) {
+      console.log(user.name);
+    }
+  });
+task3(userFriends);
+
+//!========================= map() ======================================
+console.log("Task - 4: Створи масив лише з імен користувачів");
+const task4 = (users) => users.map((user) => user.name);
+console.log(task4(userFriends));
+
+console.log("Task - 5: Створи новий масив об’єктів формату");
+const task5 = (users) =>
+  users.map((user) => {
+    return {
+      name: user.name,
+      friendsCount: user.friends.length,
+    };
+  });
+console.log(task5(userFriends));
+
+console.log(
+  "Task - 6: Створи масив масивів друзів (тобто map повертає тільки user.friends)"
+);
+const task6 = (users) => users.map((user) => user.friends);
+console.log(task6(userFriends));
+
+//!========================= filter() ======================================
+console.log("Task - 7: Отримай всіх користувачів зі статтю <male>");
+console.log("Task - 8: Отримай всіх користувачів зі статтю <male>");
+console.log("Task - 9: Отримай всіх користувачів зі статтю <male>");
