@@ -465,3 +465,106 @@ console.log(task11(userFriends));
 console.log("Task - 12: Перевір, чи є хоча б один користувач жіночої статі.");
 const task12 = (users) => users.some((user) => user.gender === "female");
 console.log(task12(userFriends));
+
+console.log(
+  "Task - 13: Перевір, чи є користувач, у якого є друг Naomi Buckner"
+);
+const task13 = (users) =>
+  users.some((user) => user.friends.includes("Naomi Buckner"));
+console.log(task13(userFriends));
+
+console.log("Task - 14: Перевір, чи всі користувачі мають хоча б одного друга");
+const task14 = (users) => users.every((user) => user.friends.length >= 1);
+console.log(task14(userFriends));
+
+console.log(
+  "Task - 15: Перевір, чи всі користувачі мають стать male або female (тобто не порожню)"
+);
+const task15 = (users) =>
+  users.every((user) => user.gender === "male" || user.gender === "female");
+console.log(task15(userFriends));
+
+//!============================== reduce ======================================
+console.log(
+  "Task - 16: Порахуй загальну кількість усіх друзів у масиві userFriends"
+);
+const task16 = (users) =>
+  users.reduce((acc, user) => (acc += user.friends.length), 0);
+console.log(task16(userFriends));
+
+console.log(
+  "Task - 17: Створи масив ВСІХ друзів (одним reduce), без вкладеності."
+);
+const task17 = (users) =>
+  users.reduce((arr, user) => arr.concat(user.friends), []);
+console.log(task17(userFriends));
+
+console.log("Task - 18: Створи об’єкт статистики статей");
+
+const task18 = (users) =>
+  users.reduce((acc, user) => {
+    acc[user.gender] = (acc[user.gender] || 0) + 1;
+    return acc;
+  }, {});
+
+console.log(task18(userFriends));
+
+console.log(
+  "Task - 19: Створи масив імен користувачів (як у map), але через reduce"
+);
+const task19 = (users) =>
+  users.reduce((acc, user) => acc.concat(user.name), []);
+console.log(task19(userFriends));
+
+console.log(
+  "Task - 20: Створи масив користувачів, у яких більше 1 друга — але через reduce (без filter)"
+);
+const task20 = (users) =>
+  users.reduce((acc, user) => {
+    if (user.friends.length > 1) {
+      return acc.concat(user.name);
+    }
+    return acc;
+  }, []);
+console.log(task20(userFriends));
+
+//!============================== sort() / toSorted() ======================================
+
+console.log(
+  "Task - 21: Відсортуй користувачів за ім’ям у алфавітному порядку."
+);
+const task21 = (users) =>
+  users.toSorted((a, b) => a.name.localeCompare(b.name));
+console.log(task21(userFriends));
+
+console.log(
+  "Task - 22: Відсортуй користувачів за кількістю друзів (зростання)."
+);
+const task22 = (users) =>
+  users.toSorted((a, b) => a.friends.length - b.friends.length);
+console.log(task22(userFriends));
+
+console.log(
+  "Task - 23: Відсортуй користувачів за кількістю друзів (спадання)."
+);
+const task23 = (users) =>
+  users.toSorted((a, b) => b.friends.length - a.friends.length);
+console.log(task23(userFriends));
+
+console.log(
+  "Task - 24: Відсортуй імена друзів кожного юзера в алфавітному порядку лише map + toSorted"
+);
+const task24 = (users) =>
+  users.map((user) => user.friends.toSorted((a, b) => a.localeCompare(b)));
+
+console.log(task24(userFriends));
+
+console.log(
+  "Task - 25: Створи масив унікальних імен усіх друзів, відсортований по алфавіту."
+);
+const task25 = (users) => {
+  return [...new Set(users.flatMap((user) => user.friends))].toSorted((a, b) =>
+    a.localeCompare(b)
+  );
+};
+console.log(task25(userFriends));
