@@ -441,5 +441,27 @@ console.log(task6(userFriends));
 
 //!========================= filter() ======================================
 console.log("Task - 7: Отримай всіх користувачів зі статтю <male>");
-console.log("Task - 8: Отримай всіх користувачів зі статтю <male>");
-console.log("Task - 9: Отримай всіх користувачів зі статтю <male>");
+const task7 = (users) => users.filter((item) => item.gender === "male");
+console.log(task7(userFriends));
+
+console.log("Task - 8: Отримай всіх користувачів, у яких більше 2 друзів");
+const task8 = (users) => users.filter((item) => item.friends.length > 2);
+console.log(task8(userFriends));
+
+console.log("Task - 9: Отримай всіх користувачів, у яких є друг Sharron Pace");
+const task9 = (users) =>
+  users.filter((item) => item.friends.includes("Sharron Pace"));
+console.log(task9(userFriends));
+
+//!========================= find, some, every ======================================
+console.log("Task - 10: Знайди користувача з ім’ям Sheree Anthony");
+const task10 = (users) => users.find((user) => user.name === "Sheree Anthony");
+console.log(task10(userFriends));
+
+console.log("Task - 11: Знайди користувача, у якого 3 друга");
+const task11 = (users) => users.find((user) => user.friends.length === 3);
+console.log(task11(userFriends));
+
+console.log("Task - 12: Перевір, чи є хоча б один користувач жіночої статі.");
+const task12 = (users) => users.some((user) => user.gender === "female");
+console.log(task12(userFriends));
