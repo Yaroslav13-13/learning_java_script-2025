@@ -1,3 +1,12 @@
+//!   ДЗ Модуль 7
+//!   Task 1
+console.log("| TASC - 1 |");
+const item = document.querySelectorAll(".item");
+
+const list = document.querySelector("#categories");
+console.log(list);
+
+//* ============================== ПРАКТИКА ============================================
 //!=====================================================================================
 //!=============================== 7. Mодуль DOM. Події ================================
 //!=====================================================================================
@@ -157,3 +166,41 @@ li3.classList.add("list");
 li3.remove();
 
 //todo ========================================= Властивість innerHTML ===========================================
+
+const img = document.querySelector(".image");
+console.log(img.src);
+console.log(img.alt);
+// -------------------------------------------------
+// const div1 = document.querySelector(".box-content");
+// div1.classList.add("title");
+// div1.classList.remove("title");
+// console.log(div1.classList.contains("title"));
+// const a1 = document.querySelector(".item");
+// a1.classList.toggle("new");
+// a1.classList.remove("new");
+// a1.classList.contains("new");
+// console.log(a1);
+// a1.styles.fontSize =
+
+// 🔥 ЗАВДАННЯ 1
+// const titleEl = document.querySelector(".title");
+// const listEl = document.querySelector(".list");
+// const itemsEl = document.querySelectorAll(".item");
+
+// 🔥 ЗАВДАННЯ 2
+
+const btnStart = document.querySelector("#start");
+const btnStop = document.querySelector("#stop");
+const textStatus = document.querySelector("p");
+console.log(btnStart);
+console.log(btnStop);
+console.log(textStatus);
+
+// 🔥 ЗАВДАННЯ 3
+const cardEl = document.querySelector(".card");
+const titleEl = document.querySelector(".card-title");
+const priceEl = document.querySelector(".card-price");
+
+// 🔥 ЗАВДАННЯ 4
+const menuId = document.querySelector("#menu");
+console.log(menuId);
