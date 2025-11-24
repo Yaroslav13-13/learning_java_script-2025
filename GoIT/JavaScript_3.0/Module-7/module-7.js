@@ -183,24 +183,85 @@ console.log(img.alt);
 // a1.styles.fontSize =
 
 // 🔥 ЗАВДАННЯ 1
-// const titleEl = document.querySelector(".title");
-// const listEl = document.querySelector(".list");
-// const itemsEl = document.querySelectorAll(".item");
+const productEl = document.querySelectorAll(".product");
+console.log(productEl);
 
 // 🔥 ЗАВДАННЯ 2
+const productList = document.querySelector(".product-list");
+console.log(productList.firstElementChild);
+console.log(productList.lastElementChild);
 
-const btnStart = document.querySelector("#start");
-const btnStop = document.querySelector("#stop");
-const textStatus = document.querySelector("p");
-console.log(btnStart);
-console.log(btnStop);
-console.log(textStatus);
+const nextEl = productList.firstElementChild;
+console.log(nextEl.nextElementSibling);
+
+const nextEll = productList.lastElementChild;
+console.log(nextEll.previousElementSibling);
+console.log(productList.children);
 
 // 🔥 ЗАВДАННЯ 3
-const cardEl = document.querySelector(".card");
-const titleEl = document.querySelector(".card-title");
-const priceEl = document.querySelector(".card-price");
+const task3 = document.querySelector(".product-price");
+const task3Parent = document.querySelector(".product-title").parentElement;
+console.log(task3.closest("ul"));
+console.log(task3Parent);
+// console.log(productEl.closest("section"));
 
 // 🔥 ЗАВДАННЯ 4
-const menuId = document.querySelector("#menu");
-console.log(menuId);
+const task4 = document.querySelector("#title");
+task4.textContent = "Products List Updated!";
+
+// 🔥 ЗАВДАННЯ 5
+const task5 = document.querySelector(".product-list").firstElementChild;
+task5.classList.add("highlight");
+task5.classList.contains("highlight");
+task5.classList.remove("highlight");
+task5.classList.contains("highlight");
+task5.classList.replace("section-title", "heading");
+// task5.classList.toggle("darc");
+
+// 🔥 ЗАВДАННЯ 6
+const task6 = document.querySelector(".product-price");
+const task6Color = document.querySelector("#controls");
+task6.style.color = "red";
+task6Color.style.backgroundColor = "green";
+task6Color.style.fontSize = "roboto";
+
+// 🔥 ЗАВДАННЯ 7
+const task7Title = document.querySelector("#title");
+console.log(task7Title.hasAttribute("data-info"));
+console.log(task7Title.getAttribute("data-info"));
+task7Title.setAttribute("data-info", "updated-title");
+task7Title.removeAttribute("data-info");
+
+// 🔥 ЗАВДАННЯ 8
+const task8 = document.querySelectorAll(".product[data-id]");
+const arr = Array.from(task8).map((item) => item.dataset.id);
+const numberData = arr.map((item) => Number(item));
+const result = numberData.map((item) => item + 100);
+console.log(arr);
+console.log(numberData);
+console.log(result);
+
+// 🔥 ЗАВДАННЯ 9
+const task9 = document.querySelector(".product-list");
+task9.createElement("li");
+// 🔥 ЗАВДАННЯ 10
+
+// 🔥 ЗАВДАННЯ 11
+
+// 🔥 ЗАВДАННЯ 12
+
+// 🔥 ЗАВДАННЯ 13
+
+// 🔥 ЗАВДАННЯ 14
+
+// 🔥 ЗАВДАННЯ 15
+
+// 🔥 ЗАВДАННЯ 16
+
+// 🔥 ЗАВДАННЯ 17
+
+// 🔥 ЗАВДАННЯ 18
+
+// 🔥 ЗАВДАННЯ 19
+
+// 🔥 ЗАВДАННЯ 20
