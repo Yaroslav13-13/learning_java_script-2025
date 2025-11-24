@@ -1,10 +1,10 @@
 //!   ДЗ Модуль 7
 //!   Task 1
 console.log("| TASC - 1 |");
-const item = document.querySelectorAll(".item");
+// const item = document.querySelectorAll(".item");
 
-const list = document.querySelector("#categories");
-console.log(list);
+// const list = document.querySelector("#categories");
+// console.log(list);
 
 //* ============================== ПРАКТИКА ============================================
 //!=====================================================================================
@@ -243,8 +243,21 @@ console.log(result);
 
 // 🔥 ЗАВДАННЯ 9
 const task9 = document.querySelector(".product-list");
-task9.createElement("li");
+const newli = document.createElement("li");
+newli.classList.add("product");
+newli.dataset.id = "999";
+const span1 = document.createElement("span");
+span1.classList.add("product-title");
+span1.textContent = "Kiwi";
+const span2 = document.createElement("span");
+span2.classList.add("product-price");
+span2.textContent = " $5";
+newli.append(span1, span2);
+task9.append(newli);
+console.log(task9);
+
 // 🔥 ЗАВДАННЯ 10
+task9.prepend(newli);
 
 // 🔥 ЗАВДАННЯ 11
 
