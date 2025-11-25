@@ -261,11 +261,24 @@ task9.prepend(newli);
 
 // 🔥 ЗАВДАННЯ 11
 
+const task11 = document.querySelector(".product-list");
+task11.lastElementChild.remove();
+
 // 🔥 ЗАВДАННЯ 12
+const task12 = document.querySelector("#modal");
+task12.innerHTML = `<div id='modal' class='shown'><p>New modal text</p></div>`;
 
 // 🔥 ЗАВДАННЯ 13
+const task13 = document.querySelector(".product-list");
+const temporary = `<li class="product temp">Temporary item</li>`;
+task13.firstElementChild.insertAdjacentHTML("beforeend", temporary);
 
 // 🔥 ЗАВДАННЯ 14
+const task14 = document.querySelector(".back-btn");
+task14.disabled = true;
+setTimeout(() => {
+  task14.disabled = false;
+}, 2000);
 
 // 🔥 ЗАВДАННЯ 15
 
