@@ -281,13 +281,37 @@ setTimeout(() => {
 }, 2000);
 
 // 🔥 ЗАВДАННЯ 15
+const task15 = document.querySelector("#controls");
+task15.firstElementChild.textContent = "Added!";
 
 // 🔥 ЗАВДАННЯ 16
+const task16 = document.querySelectorAll(".product-price");
+const arr16 = Array.from(task16);
+arr16.forEach((item) => {
+  item.style.color = "blue";
+  item.classList.add("updated");
+});
+console.log(task16);
 
 // 🔥 ЗАВДАННЯ 17
+const task17 = document.querySelector("#title");
+console.log("ParendNode: ", task17.parentNode);
+console.log("ParendElement: ", task17.parentElement);
 
 // 🔥 ЗАВДАННЯ 18
+const task18 = document.querySelector("#products");
+console.log(task18.parentElement);
 
 // 🔥 ЗАВДАННЯ 19
+const task19 = document.querySelectorAll(".product");
 
+task19.forEach((item) => {
+  const title = item.querySelector(".product-title").textContent;
+  const price = item.querySelector(".product-price").textContent;
+  const id = item.dataset.id;
+
+  console.log("Title:", title);
+  console.log("Price:", price);
+  console.log("ID:", id);
+});
 // 🔥 ЗАВДАННЯ 20
