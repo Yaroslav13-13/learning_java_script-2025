@@ -1,6 +1,64 @@
 //!   ДЗ Модуль 7
 //!   Task 1
 console.log("| TASC - 1 |");
+
+const listUl = document.querySelector("#categories");
+const itemLi = document.querySelectorAll(".item");
+console.log(`Number of categories: ${listUl.children.length}`);
+
+itemLi.forEach((el) => {
+  console.log(`Category: ${el.firstElementChild.textContent}`);
+  console.log(`Element: ${el.lastElementChild.children.length}`);
+});
+
+//!   Task 2
+console.log("| TASC - 2 |");
+
+const images = [
+  {
+    url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260",
+    alt: "White and Black Long Fur Cat",
+  },
+  {
+    url: "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?dpr=2&h=750&w=1260",
+    alt: "Orange and White Koi Fish Near Yellow Koi Fish",
+  },
+  {
+    url: "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?dpr=2&h=750&w=1260",
+    alt: "Group of Horses Running",
+  },
+  {
+    url: "https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272_1280.jpg",
+    alt: "Alpine Spring Meadows",
+  },
+  {
+    url: "https://cdn.pixabay.com/photo/2019/05/16/21/10/landscape-4208255_1280.jpg",
+    alt: "Nature Landscape",
+  },
+  {
+    url: "https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg",
+    alt: "Lighthouse Coast Sea",
+  },
+];
+
+const gallery = document.querySelector(".gallery");
+const galleryImg = images
+  .map(
+    (img) =>
+      `<li class="img-list"><img src="${img.url}"
+   alt="${img.alt}" width="280px"/></li> `
+  )
+  .join("");
+
+gallery.insertAdjacentHTML("afterbegin", galleryImg);
+
+console.log(
+  "================================================================="
+);
+console.log(
+  "================================================================="
+);
+
 // const item = document.querySelectorAll(".item");
 
 // const list = document.querySelector("#categories");
@@ -303,15 +361,63 @@ const task18 = document.querySelector("#products");
 console.log(task18.parentElement);
 
 // 🔥 ЗАВДАННЯ 19
-const task19 = document.querySelectorAll(".product");
+// const task19 = document.querySelectorAll(".product");
 
-task19.forEach((item) => {
-  const title = item.querySelector(".product-title").textContent;
-  const price = item.querySelector(".product-price").textContent;
-  const id = item.dataset.id;
+// task19.forEach((item) => {
+//   const title = item.querySelector(".product-title").textContent;
+//   const price = item.querySelector(".product-price").textContent;
+//   const id = item.dataset.id;
 
-  console.log("Title:", title);
-  console.log("Price:", price);
-  console.log("ID:", id);
-});
+//   console.log("Title:", title);
+//   console.log("Price:", price);
+//   console.log("ID:", id);
+// });
+// 🔥 ЗАВДАННЯ 20
+// ! ======================== ПОДІЇ практика =========================
+
+// 🔥 ЗАВДАННЯ 1
+const task1Btn = document.querySelector("#btn-basic");
+task1Btn.addEventListener("click", () => console.log("Button was clicked!"));
+
+// 🔥 ЗАВДАННЯ 2
+const task2Btn = document.querySelector("#btn-basic");
+task2Btn.addEventListener("click", () => (task2Btn.textContent = "Pressed!"));
+
+// 🔥 ЗАВДАННЯ 3
+const task3Input = document.querySelector("#input-basic");
+const task3Text = document.querySelector("#text-output");
+task3Input.addEventListener("input", (event) => event.target.velue);
+
+// 🔥 ЗАВДАННЯ 4
+
+// 🔥 ЗАВДАННЯ 5
+
+// 🔥 ЗАВДАННЯ 6
+
+// 🔥 ЗАВДАННЯ 7
+
+// 🔥 ЗАВДАННЯ 8
+
+// 🔥 ЗАВДАННЯ 9
+
+// 🔥 ЗАВДАННЯ 10
+
+// 🔥 ЗАВДАННЯ 11
+
+// 🔥 ЗАВДАННЯ 12
+
+// 🔥 ЗАВДАННЯ 13
+
+// 🔥 ЗАВДАННЯ 14
+
+// 🔥 ЗАВДАННЯ 15
+
+// 🔥 ЗАВДАННЯ 16
+
+// 🔥 ЗАВДАННЯ 17
+
+// 🔥 ЗАВДАННЯ 18
+
+// 🔥 ЗАВДАННЯ 19
+
 // 🔥 ЗАВДАННЯ 20

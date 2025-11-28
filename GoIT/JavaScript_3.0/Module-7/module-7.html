@@ -73,6 +73,7 @@
         </li>
       </ul>
     </div>
+    <ul class="gallery"></ul>
     <div class="box-content">
       <button class="chenge-color btn_7">Change color</button>
 
@@ -128,6 +129,62 @@
         <p class="modal-text">Modal window</p>
         <button id="close-modal">Close</button>
       </div>
+
+      <!-- Практика події -->
+      <!-- ============================================================================= -->
+
+      <h1>Events Playground</h1>
+
+      <section id="events-basic">
+        <h2>Basic Events</h2>
+
+        <button id="btn-basic">Press me</button>
+
+        <input
+          id="input-basic"
+          type="text"
+          placeholder="Type something here..."
+        />
+
+        <p id="text-output">Output:</p>
+      </section>
+
+      <section id="events-form">
+        <h2>Form Events</h2>
+
+        <form id="user-form">
+          <label>
+            Username:
+            <input type="text" id="username-field" />
+          </label>
+
+          <label>
+            Age:
+            <input type="number" id="age-field" />
+          </label>
+
+          <label>
+            Email:
+            <input type="email" id="email-field" required />
+          </label>
+
+          <button id="submit-form" type="submit">Submit</button>
+        </form>
+
+        <p id="form-message"></p>
+      </section>
+
+      <section id="events-list">
+        <h2>Product List (Delegation)</h2>
+
+        <ul id="item-list">
+          <li data-item="a1">Laptop</li>
+          <li data-item="b2">Phone</li>
+          <li data-item="c3">Tablet</li>
+        </ul>
+
+        <button id="add-item">Add item</button>
+      </section>
 
       <!--todo ========================================================================= -->
     </div>
