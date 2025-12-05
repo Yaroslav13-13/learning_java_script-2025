@@ -51,7 +51,41 @@ const galleryImg = images
   .join("");
 
 gallery.insertAdjacentHTML("afterbegin", galleryImg);
+console.log(galleryImg);
 
+//!   Task 3
+console.log("| TASC - 3 |");
+const inputText = document.querySelector("#name-input");
+const output = document.querySelector("#name-output");
+inputText.addEventListener("input", (event) => {
+  const value = event.currentTarget.value.trim();
+  if (value === "") {
+    output.textContent = "Anonymous";
+  } else {
+    output.textContent = value;
+  }
+});
+
+//!   Task 4
+console.log("| TASC - 4 |");
+
+const registerForm = document.querySelector(".login-form");
+
+registerForm.addEventListener("submit", handleSubmit);
+
+function handleSubmit(event) {
+  event.preventDefault();
+  const form = event.target;
+  const login = form.elements.login.value;
+  const password = form.elements.password.value;
+
+  if (login === "" || password === "") {
+    return console.log("Please fill in all the fields!");
+  }
+
+  console.log(`Login: ${login}, Password: ${password}`);
+  form.reset();
+}
 console.log(
   "================================================================="
 );
