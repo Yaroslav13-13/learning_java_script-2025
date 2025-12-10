@@ -154,4 +154,38 @@ const promise1 = [...div.children].map(() => {
 
 Promise.allSettled(promise1).then((res) => console.log(res));
 
-// ==================================== ПРАКТИКА =====================================================
+console.log("========================= ПРАКТИКА ========================");
+//1.
+new Promise((resolve) => {
+  setTimeout(() => {
+    resolve("Done");
+  }, 2000);
+}).then((res) => console.log(res));
+
+// 2
+function CheckNumber(num) {
+  return new Promise((resolve, reject) => {
+    if (num > 5) {
+      resolve("OK");
+    } else {
+      reject("Small number");
+    }
+  });
+}
+CheckNumber(4)
+  .then((res) => console.log(res))
+  .catch((err) => console.log(err));
+
+// 3
+function wait(ms) {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(ms), ms);
+  });
+}
+
+wait(1000).then((res) => console.log(`Пройшла ${res / 1000} секунда`));
+
+// 4
+const promise = new Promise((resolve) => {
+  return resolve;
+}).then(() => {});
