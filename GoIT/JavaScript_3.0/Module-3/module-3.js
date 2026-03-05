@@ -52,7 +52,7 @@ console.log(filterArray([12, 24, 8, 41, 76], 38)); // [41, 76]
 console.log(filterArray([12, 24, 8, 41, 76], 20)); // [24, 41, 76]
 
 console.log(
-  "============================================================================="
+  "=============================================================================",
 );
 console.log(" = ПРАКТИКА = ");
 
@@ -81,3 +81,65 @@ function unique(arr) {
 console.log(unique([1, 2, 2, 3, 1, 4])); // [1, 2, 3, 4]
 
 console.log(unique(["a", "b", "a", "c", "b"])); // ["a","b","c"]
+console.log("=============================================================");
+
+console.log(" Завдання 1 ");
+const numbers = [5, 10, 15, 20];
+console.log(numbers.length);
+
+console.log(" Завдання 2 ");
+const fruits = ["apple", "banana", "orange"];
+fruits.forEach((item) => console.log(item));
+
+console.log(" Завдання 3 ");
+
+for (let i = 0; i < numbers.length; i++) {
+  console.log(numbers[0]);
+}
+
+numbers.forEach(() => {
+  return console.log(numbers[0]);
+});
+
+console.log(" Завдання 4 ");
+numbers.forEach(() => console.log(numbers[3]));
+
+console.log(" Завдання 5 ");
+
+numbers.push(50);
+console.log(numbers);
+
+console.log(" Завдання 6 ");
+numbers.pop();
+console.log(numbers);
+
+console.log(" Завдання 7 ");
+console.log(numbers.reduce((acc, num) => acc + num, 0));
+
+console.log(" Завдання 8 ");
+numbers.map((num) => console.log(num * 2));
+
+console.log(" Завдання 9 ");
+numbers.forEach((num) => {
+  if (num % 2 === 0) {
+    return console.log(num);
+  }
+});
+
+console.log(" Завдання 10 ");
+const fruitss = ["apple", "banana", "orange"];
+fruitss.forEach((item) => console.log(fruitss.includes("banana")));
+console.log(
+  "==================================================================",
+);
+
+console.log("Завдання 11");
+console.log("Завдання 12");
+console.log("Завдання 13");
+console.log("Завдання 14");
+console.log("Завдання 15");
+console.log("Завдання 16");
+console.log("Завдання 17");
+console.log("Завдання 18");
+console.log("Завдання 19");
+console.log("Завдання 20");

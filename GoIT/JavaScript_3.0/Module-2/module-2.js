@@ -358,3 +358,33 @@ function countVowels(text) {
   return total;
 }
 console.log(countVowels("efwsdvwaeiouvwvwveioueiou"));
+
+console.log("========================================");
+console.log("Повторна практика");
+console.log("========================================");
+console.log("Розгалуження");
+
+function checkStorage(available, ordered) {
+  if (ordered === 0) {
+    return "There are no products in the order!";
+  } else if (ordered > available) {
+    return "Your order is too large, there are not enough items in stock!";
+  }
+  return "The order is accepted, our manager will contact you";
+}
+
+console.log(checkStorage(100, 50));
+console.log(checkStorage(100, 130));
+console.log(checkStorage(70, 0));
+console.log("_____________________________________________");
+
+const mixed = ["apple", 10, true];
+
+function getLastElementMeta(arr) {
+  for (const item of arr) {
+    if (typeof item === "number") {
+      return item;
+    }
+  }
+}
+console.log(getLastElementMeta(mixed));
