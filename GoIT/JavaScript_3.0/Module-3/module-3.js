@@ -134,12 +134,53 @@ console.log(
 );
 
 console.log("Завдання 11");
+const words = ["apple", "banana", "kiwi"];
+const wordsLength = words.map((word) => word.length);
+console.log(wordsLength);
+
 console.log("Завдання 12");
+
+const numbers12 = [5, 12, 8, 20, 3];
+const bigNumbers = numbers12.filter((num) => num > 10);
+console.log(bigNumbers);
+
 console.log("Завдання 13");
+const numbers13 = [4, 7, 15, 3];
+
+const lastBigNumber = numbers13.find((num) => num > 10);
+console.log(lastBigNumber);
+
 console.log("Завдання 14");
+
+const numbers14 = [2, 5, 8, 1];
+const hasEvenNumber = numbers14.every((num) => num > 0);
+console.log(hasEvenNumber);
+
 console.log("Завдання 15");
+const numbers15 = [10, 50, 200, 30];
+const findNumbers = numbers15.some((num) => num > 100);
+console.log(findNumbers);
+
 console.log("Завдання 16");
+const words16 = ["JS", "HTML", "CSS", "React"];
+console.log(words16.length);
+
 console.log("Завдання 17");
+const words17 = ["apple", "banana", "kiwi"];
+const wordsToLowerCase = words.map((word) => word.toUpperCase());
+console.log(wordsToLowerCase);
+
 console.log("Завдання 18");
+const numbers18 = [10, 20, 30];
+const sum18 = numbers18.reduce((acc, num) => acc + num, 0);
+console.log(sum18);
+
 console.log("Завдання 19");
+const arr = [0, "hello", false, 5, "", null];
+const truthyValues = arr.filter((value) => Boolean(value));
+console.log(truthyValues);
+
 console.log("Завдання 20");
+const numbers20 = [2, 3, 4];
+const squaredNumbers = numbers20.map((num) => num ** 2);
+console.log(squaredNumbers);
